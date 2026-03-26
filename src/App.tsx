@@ -19,13 +19,15 @@ function DetailedClock() {
         seconds: now.getSeconds(),
         ms: now.getMilliseconds(),
       });
-    }, 10);
+    }, 0.1);
 
     return () => clearInterval(timer);
   }, []);
 
   const pad = (num: number, size = 2) => String(num).padStart(size, "0");
   const msPad = (num: number, size = 3) => String(num).padStart(size, "0");
+
+  console.log("ms", timeInfo.ms);
 
   return (
     <div className={styles.Wrapper}>
