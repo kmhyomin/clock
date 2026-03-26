@@ -25,3 +25,16 @@
   width: 80rem;
   text-align: center;
 }
+
+@media only screen and (max-width: 1139px) {
+  .clock {
+    font-size: 5rem;
+    width: 40rem;
+  }
+}
+@media only screen and (max-width: 675px) {
+  .clock {
+    font-size: 2.5rem;
+    width: 20rem;
+  }
+}
