@@ -25,6 +25,7 @@ function DetailedClock() {
   }, []);
 
   const pad = (num: number, size = 2) => String(num).padStart(size, "0");
+  const msPad = (num: number, size = 3) => String(num).padStart(size, "0");
 
   return (
     <div className={styles.Wrapper}>
@@ -32,7 +33,7 @@ function DetailedClock() {
         <span className={styles.hour}>{pad(timeInfo.hours)}:</span>
         <span className={styles.minute}>{pad(timeInfo.minutes)}:</span>
         <span className={styles.second}>{pad(timeInfo.seconds)}:</span>
-        <span className={styles.ms}>{pad(timeInfo.ms)}</span>
+        <span className={styles.ms}>{msPad(timeInfo.ms)}</span>
       </div>
     </div>
   );
